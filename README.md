@@ -1,1 +1,3 @@
 # TPFinalPEyLW
+
+Venta de electrónica.
