@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>registo</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <style>
+  </style>
+
+
+<script type="text/javascript" src="funciones.js"></script>
+</head>
+<body>
+  <div class="enlases" style="padding-top: 20px;">
+    <img style="float: right; padding-right: 8px;" width="360" height="120" src="img/titulo.png">
+</div>
+<div>
+<table  style="padding-left: 15px;">
+  <tr>
+    <td align="center" style="padding-top: 22px;">
+        <a href="http://127.0.0.1:5500/paginaPrincipal.html">
+            <img class="img" id="sesion" align="left" width="60"  height="56" src="img/Menu.png"></a>
+    </td>
+<td align="center" width="800">   
+      <br>
+      <div>
+          <h1 style="font-size: 55px; text-align: left; padding-left: 20px;"><u>Registrarse</u></h1>
+        </div>
+</td> 
+</tr>
+</table>
+
+</div>
+  <div class="ColumnasDecorativas" style="padding-left: 100px; padding-right: 100px;">
+    <div class="fondo1" style="padding-bottom: 1px; padding-top: 1px;">
+  <form class="formRegistro" id="miFormulario">
+<table>
+  <tr>
+           <td> <label for="nombre">Nombre de usuario:</label>
+            <input type="text" id="nombre" name="nombre" >
+            <br>
+            <span id="nombre-error" class="error-message"></span>
+        <br>
+          </td>
+          <td width="15%" ></td>
+           <td> <label for="email">Email:</label>
+                <input type="text" id="email" name="email" >
+                <br>
+                <span id="email-error" class="error-message"></span>
+                <br>
+          </td>      
+  </tr>
+  <tr>
+    <td>        <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" >
+                <br>
+                <span id="contraseña-error" class="error-message"></span>
+                <br>
+    </td>
+    <td width="15%" ></td>
+    <td>
+                <label for="Rep-contraseña">Repetir Contraseña:</label>
+                <input type="password" id="Rep-contraseña" name="Rep-contraseña" >
+                <br>
+                <span id="Rep-contraseña-error" class="error-message"></span>
+                <br>
+    </td>
+  </tr>
+  <br>
+  <tr>
+    <td>
+                <label for="dia">Fecha de Nacimiento:</label>
+                <div class="date-inputs">
+                <input type="text" id="dia" name="dia" placeholder="D&iacute;a" >  
+                <input type="text" id="mes" name="mes" placeholder="Mes" > 
+                <input type="text" id="anio" name="anio" placeholder="A&ntilde;o" >
+                </div>
+                <span id="fecha_nacimiento-error" class="error-message"></span>
+                <br>
+    </td>
+    <td width="15%" ></td>
+    <td>
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono" >
+                <br>
+                <span id="telefono-error" class="error-message"></span>
+                <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    <label for="observaciones">Biografía:</label>
+    <textarea id="observaciones" name="observaciones" placeholder="Opcional..."></textarea>
+    </td>
+  </tr>
+
+</table>
+<br>
+<div class="contenedor">
+  <input type="submit" class="inpRegsitro" value="Confirmar" onclick="return validarRegistro()">
+</div>
+  </form>
+
+</div>
+</div>
+</body>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('miFormulario');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+    });
+  });
+</script>
+
+</html>
